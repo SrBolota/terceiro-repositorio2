@@ -70,3 +70,4 @@ geraSenha();
 
 for (i=0; i< checkbox.length; i++) {
     checkbox[i].onclick = geraSenha;
+}
