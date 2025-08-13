@@ -1,9 +1,17 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');
+const campoSenha = document.querySelector("#campo-senha");
+const checkbox = document.querySelectorAll('.checkbox');
+const botoes = document.querySelectorAll('.parametro-senha__botao');
+const forcaSenha = document.querrySelector('.forca');
+const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
+const numeros = '0123456789';
+const simbolos = '!@%*?';
+
 let tamanhoSenha = 12;
 
 numeroSenha.textContent = tamanhoSenha;
 
-const botoes = document.querySelectorAll('.parametro-senha__botao');
 
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
@@ -25,14 +33,6 @@ function aumentaTamanho(){
     geraSenha();
 }
 
-const campoSenha = document.querySelector("#campo-senha");
-
-const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
-const numeros = '0123456789';
-const simbolos = '!@%*?';
-
-const checkbox = document.querySelectorAll('.checkbox');
 
 function geraSenha() {
     let alfabeto = '';
@@ -88,5 +88,6 @@ function classificaSenha(tamanhoAlfabeto){
 
     const valorEntropia = document.querySelector('.entropia');
     valorEntropia.textContent = 2**Math.floor(entropia)/(100e6*60*60*24);
+
 
 }
