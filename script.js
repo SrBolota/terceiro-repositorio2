@@ -33,6 +33,7 @@ function aumentaTamanho(){
     geraSenha();
 }
 
+geraSenha();
 
 function geraSenha() {
     let alfabeto = '';
@@ -60,13 +61,6 @@ function geraSenha() {
 }
 
 
-for (i=0; i< checkbox.length; i++) {
-    checkbox[i].onclick = geraSenha;
-}
-
-
-geraSenha();
-
 function classificaSenha(tamanhoAlfabeto){
     let entropia = tamanhoSenha*Math.log2(tamanhoAlfabeto);
     console.log(entropia);
@@ -91,3 +85,4 @@ function classificaSenha(tamanhoAlfabeto){
 
 
 }
+
